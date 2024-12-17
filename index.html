@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>BOGO Product Offer</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>YAY! it's BOGO</header>
+
+      <!-- UNIT ONE BOX -->
+      <section class="option">
+        <label class="container_one" for="unit1">
+          <input
+            type="radio"
+            name="units"
+            value="10"
+            id="unit1"
+            data-discount="10"
+            data-selector="selector1"
+          />
+          <div class="details">
+            <div class="details_offer">
+              <div class="details_unit">
+                <h2>1 Unit</h2>
+                <span class="discount">10% Off</span>
+              </div>
+              <span>Standard Price</span>
+            </div>
+            <div class="details_special">
+              <h2 class="price">$10.00 USD</h2>
+              <span class="price" style="text-decoration: line-through"
+                >$24.00 USD</span
+              >
+            </div>
+          </div>
+        </label>
+
+        <div class="container_one_selectors" id="selector1"></div>
+      </section>
+
+      <!-- UNIT TWO BOX -->
+      <section class="option">
+        <label class="container_one" for="unit2">
+          <span class="popular">MOST POPULAR</span>
+          <input
+            type="radio"
+            name="units"
+            id="unit2"
+            value="18"
+            data-discount="10"
+            data-selector="selector2"
+          />
+          <div class="details">
+            <div class="details_offer">
+              <div class="details_unit">
+                <h2>2 Unit</h2>
+                <span class="discount">20% Off</span>
+              </div>
+              <!-- <span>Special Price</span> -->
+            </div>
+
+            <div class="details_special">
+              <h2 class="price">$18.00 USD</h2>
+              <span class="price" style="text-decoration: line-through"
+                >$24.00 USD</span
+              >
+            </div>
+          </div>
+        </label>
+        <div class="container_one_selectors" id="selector2"></div>
+      </section>
+
+      <!-- UNIT THREE BOX  -->
+      <section class="option">
+        <label class="container_one" for="unit3">
+          <input
+            type="radio"
+            name="units"
+            value="24"
+            id="unit3"
+            data-discount="10"
+            data-selector="selector3"
+          />
+          <div class="details">
+            <div class="details_offer">
+              <div class="details_unit">
+                <h2>3 Unit</h2>
+                <span class="discount">30% Off</span>
+              </div>
+              <!-- <span>Special Price</span> -->
+            </div>
+
+            <div class="details_special">
+              <h2 class="price">$24.00 USD</h2>
+              <span class="price" style="text-decoration: line-through"
+                >$24.00 USD</span
+              >
+            </div>
+          </div>
+        </label>
+        <div class="container_one_selectors" id="selector3"></div>
+      </section>
+      <!-- FOOTER SECTION -->
+
+      <div class="footer">
+        <span>Free Delivery</span>
+        <span id="footer_total"></span>
+      </div>
+
+      <button class="add_to_cart" id="add_to_cart_button">
+        <span>+</span> Add to Cart
+      </button>
+
+      <footer>@ Powered by Pumper</footer>
+    </div>
+
+    <script type="module" src="./interaction.js" defer></script>
+  </body>
+</html>
