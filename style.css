@@ -26,6 +26,7 @@ body {
   max-width: 500px;
   height: auto;
   margin: 2rem auto;
+  margin-top: 1rem;
   background-color: #fff;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -46,7 +47,7 @@ section {
     } */
 
 section:nth-child(3) label {
-  margin-top: 16px;
+  margin-top: 5px;
 }
 
 .popular {
