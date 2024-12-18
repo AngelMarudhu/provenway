@@ -10,11 +10,13 @@ let headers = document.querySelector("header");
 document.querySelectorAll('input[name="units"]').forEach((input) => {
   input.addEventListener("click", function () {
     document.querySelectorAll(".option").forEach((specific) => {
-      //// we need to do none of them each time we click the  radio button
+      //// This line is when we navigate to next unit box we need to clear the previous interation styles
+      //// if not this case the previous style still persist with last interaction
       specific.style.backgroundColor = "";
       specific.style.border = "";
     });
     //// this here helps us to find where we are as i told you before and closet helps us to find parent of the class name who have .option that's all
+    //// when we click the input radio button the this keyword pointing to the current box and the close helps us to find what's parent of element with .option class
     const parentSection = this.closest(".option");
     if (parentSection) {
       parentSection.style.backgroundColor = "#fff9f9";
@@ -44,7 +46,7 @@ function addToCards() {
 addToCard.addEventListener("click", addToCards);
 
 /////////////////////////////////////////////////////// THIS ONE FOR EXPANDING THE SELECTORS BASED ON THE ID ATTRIBUTE
-
+/// name units is commmon for all the input radio input so who have the units name we can easily fetch the element in the array then loop it adding listener
 let gettingElement = document.querySelectorAll('input[name="units"]');
 
 gettingElement.forEach((element) => {
@@ -59,8 +61,9 @@ function expandSelector(element) {
   document.querySelectorAll(".container_one_selectors").forEach((item) => {
     item.innerHTML = ""; // initially we need to empty all of them
   });
-  const targetSelectorId = element.getAttribute("data-selector"); // fetching  dynamic id specific element
-  const targetSelector = document.getElementById(targetSelectorId);
+
+  const targetSelectorId = element.getAttribute("data-selector"); // data selector pass information without affecting the structure fetching dynamic id specific element
+  const targetSelector = document.getElementById(targetSelectorId); // if there is particular targetid then only render the selectors the dataselector and element id should be same if not the case doesn't work like what we did above....
   // console.log(targetSelector)
 
   if (targetSelector) {

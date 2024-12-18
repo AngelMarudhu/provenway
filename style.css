@@ -198,4 +198,8 @@ select {
   h2 {
     font-size: 15px;
   }
+
+  header {
+    font-size: 20px;
+  }
 }
