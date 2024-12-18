@@ -56,7 +56,7 @@ gettingElement.forEach((element) => {
 });
 
 function expandSelector(element) {
-  //   console.log(element);
+  //   console.log(element debugg);
   // Clear all elements with the same class
   document.querySelectorAll(".container_one_selectors").forEach((item) => {
     item.innerHTML = ""; // initially we need to empty all of them
